@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace MovieApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ArtDetailsView : ContentPage
+    public partial class MovieDetailsView : ContentPage
     {
-        public ArtDetailsView()
+        public MovieDetailsView()
         {
             InitializeComponent();
         }

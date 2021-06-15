@@ -13,13 +13,16 @@
 
 
 
-<FlyoutItem FlyoutDisplayOptions="AsMultipleItems" >
-        <Tab Title="Browse Collections" >
-            <ShellContent  ContentTemplate="{DataTemplate view:ArtListViews}" />
-        </Tab>
-        <Tab Title="Favorites" >
-            <ShellContent  ContentTemplate="{DataTemplate view:FavoritesView}" />
-        </Tab>
+    <FlyoutItem Title="Search Movie" >
+        <ShellContent   ContentTemplate="{DataTemplate view:MovieListViews}">
 
+        </ShellContent>
+
+
+    </FlyoutItem>
+    <FlyoutItem Title="Favorites">
+        <ShellContent  ContentTemplate="{DataTemplate view:FavoritesView}">
+
+        </ShellContent>
     </FlyoutItem>
 </Shell>

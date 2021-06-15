@@ -21,13 +21,22 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\MovieListViews.xaml.cs">
+      <DependentUpon>MovieListViews.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\MovieDetailsView.xaml.cs">
+      <DependentUpon>MovieDetailsView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Update="AppShell.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\ArtDetailsView.xaml">
+    <EmbeddedResource Update="Views\MovieDetailsView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\ArtListViews.xaml">
+    <EmbeddedResource Update="Views\MovieListViews.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\FavoritesView.xaml">

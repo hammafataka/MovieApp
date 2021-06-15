@@ -1,6 +1,6 @@
 ﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MovieApp.Views.ArtDetailsView"
+             x:Class="MovieApp.Views.MovieDetailsView"
              Title="Art Details"
              BackgroundColor="#BB8580"
              Shell.TitleColor="#CF5F08"

@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MovieApp.Views.ArtListViews"
+             x:Class="MovieApp.Views.MovieListViews"
              xmlns:vm="clr-namespace:MovieApp.ViewModel"
              BackgroundColor="#BB8580"
-             Title="Collections"
+             Title="Movies"
              Shell.TitleColor="#CF5F08"
              Shell.BackgroundColor="#3A0B5C">
     <ContentPage.BindingContext>

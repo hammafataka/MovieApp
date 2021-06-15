@@ -51,7 +51,7 @@ namespace MovieApp.ViewModel
             {
 
                 DetailsViewModel viewModel = new DetailsViewModel(SelectedArt);
-                ArtDetailsView view = new ArtDetailsView
+                MovieDetailsView view = new MovieDetailsView
                 {
                     BindingContext = viewModel
                 };
