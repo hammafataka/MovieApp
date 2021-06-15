@@ -1,0 +1,121 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MovieApp.Views.ArtDetailsView"
+             Title="Art Details"
+             BackgroundColor="#BB8580"
+             Shell.TitleColor="#CF5F08"
+             Shell.BackgroundColor="#3A0B5C">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Favorite" Command="{Binding additemcommand}"/>
+        <ToolbarItem Text="share" Command="{Binding shareitemcommand}"/>
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        <StackLayout>
+            <Grid RowSpacing="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="400"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Image
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    Source="{Binding localobject.imageUrl}"
+                    Aspect="AspectFill"
+                    />
+
+                <Label
+                    Grid.Row="1"
+                    Text="Title:"
+                    FontSize="25"
+                    TextColor="Black"
+                    HorizontalOptions="CenterAndExpand"/>
+                <Label
+                    Grid.Row="2"
+                    Text="{Binding localobject.title}"
+                    FontSize="25"
+                    TextColor="OrangeRed"
+                    HorizontalOptions="CenterAndExpand"
+                    FontAttributes="Italic"/>
+
+                <Label 
+                    Grid.Row="3"
+                    Text="Popularity:"
+                    FontSize="25"
+                    TextColor="Black"
+                    HorizontalOptions="CenterAndExpand"/>
+
+                <Label 
+                    Grid.Row="4"
+                    Text="{Binding localobject.popularity}"
+                    FontSize="25"
+                    TextColor="OrangeRed"
+                    HorizontalOptions="CenterAndExpand"
+                    FontAttributes="Italic"/>
+
+                <Label 
+                    Grid.Row="5"
+                    Text="Release Date:"
+                    FontSize="25"
+                    TextColor="Black"
+                    HorizontalOptions="CenterAndExpand"/>
+
+                <Label 
+                    Grid.Row="6"
+                    Text="{Binding localobject.release_date}"
+                    FontSize="25"
+                    TextColor="OrangeRed"
+                    HorizontalOptions="CenterAndExpand"
+                    FontAttributes="Italic"
+                    />
+                <Label 
+                    Grid.Row="7"
+                    Text="Language:"
+                    FontSize="25"
+                    TextColor="Black"
+                    HorizontalOptions="CenterAndExpand"/>
+
+                <Label 
+                    Grid.Row="8"
+                    Text="{Binding localobject.original_language}"
+                    FontSize="25"
+                    TextColor="OrangeRed"
+                    HorizontalOptions="CenterAndExpand"
+                    FontAttributes="Italic"
+                    />
+
+                <Label 
+                    Grid.Row="9"
+                    Text="Overview:"
+                    FontSize="25"
+                    TextColor="Black"
+                    HorizontalOptions="CenterAndExpand"/>
+
+                <Label 
+                    Grid.Row="10"
+                    Text="{Binding localobject.overview}"
+                    FontSize="25"
+                    TextColor="OrangeRed"
+                    HorizontalOptions="CenterAndExpand"
+                    FontAttributes="Italic"
+                    />
+
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

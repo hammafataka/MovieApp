@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MovieApp.Views.FavoritesView"
+             BackgroundColor="#BB8580"
+             Title="Favorites"
+             Shell.TitleColor="#CF5F08"
+             Shell.BackgroundColor="#3A0B5C">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Delete" Command="{Binding DeleteItemCommand}"/>
+        <ToolbarItem Text="share" Command="{Binding ShareItemCommand}"/>
+    </ContentPage.ToolbarItems>
+            <ContentPage.Content>
+        <StackLayout>
+            <CollectionView ItemsSource="{Binding sqlart}"
+                                SelectedItem="{Binding selectedArt}"
+                                BackgroundColor="#BB8580"
+                                EmptyView="No items to display"
+                                SelectionChangedCommand="{Binding GoToDetailsCommand}"
+                                SelectionMode="Single">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout ItemSpacing="10"
+                                           Orientation="Vertical"/>
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid ColumnSpacing="15">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="120"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="125"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup Name="CommonStates">
+                                    <VisualState Name="Selected">
+                                        <VisualState.Setters>
+                                            <Setter Property="BackgroundColor" Value="#631D0F" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Image 
+                                       Grid.Row="0"
+                                       Grid.Column="0"
+                                       Source="{Binding imageUrl}"
+                                       Aspect="AspectFill"
+                                       />
+
+                            <Label 
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                Text="{Binding title}"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Start"
+                                TextColor="Silver"/>
+                            <Label 
+                                Grid.Row="0"
+                                Grid.Column="2"
+                                Text="{Binding release_date}"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                TextColor="Silver"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

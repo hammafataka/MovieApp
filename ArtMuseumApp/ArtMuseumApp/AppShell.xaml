@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       x:Class="MovieApp.AppShell"
+       xmlns:view="clr-namespace:MovieApp.Views"
+       ForegroundColor="#EF481F"
+       FlyoutBackgroundColor="#3A0B5C"
+       TabBarBackgroundColor="#3F0C5A"
+       TabBarForegroundColor="#EF481F"
+       TabBarTitleColor="#EF481F"
+       TabBarUnselectedColor="Gray"
+       >
+
+
+
+<FlyoutItem FlyoutDisplayOptions="AsMultipleItems" >
+        <Tab Title="Browse Collections" >
+            <ShellContent  ContentTemplate="{DataTemplate view:ArtListViews}" />
+        </Tab>
+        <Tab Title="Favorites" >
+            <ShellContent  ContentTemplate="{DataTemplate view:FavoritesView}" />
+        </Tab>
+
+    </FlyoutItem>
+</Shell>
